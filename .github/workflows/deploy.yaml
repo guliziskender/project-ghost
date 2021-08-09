@@ -20,8 +20,13 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}        
         aws-region: us-east-1
-    - name: Deploy CloudFormation Stack
+    - name: Deploy CloudFormation Stack VPC
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3         
       with:
-        name: vps-stack
+        name: vpc
         template: vpc.yaml
+    - name: Deploy CloudFormation Stack Service
+      uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3         
+      with:
+        name: service
+        template: service.yaml
