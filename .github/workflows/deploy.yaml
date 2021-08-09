@@ -24,4 +24,4 @@ jobs:
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3         
       with:
         name: vps-stack
-        template: /project-ghost/vpc.yml
+        template: vpc.yml
