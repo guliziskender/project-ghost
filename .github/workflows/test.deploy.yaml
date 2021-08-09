@@ -23,10 +23,10 @@ jobs:
     - name: Deploy CloudFormation Stack VPC
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3         
       with:
-        name: vpc-test
+        name: vpc
         template: vpc.yaml
     - name: Deploy CloudFormation Stack Service
       uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3         
       with:
-        name: service-test
+        name: service
         template: service.yaml
